@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof:*)",
+      "Bash(open http://localhost:8080/index.html)",
+      "WebFetch(domain:www.usgraniteinc.com)",
+      "WebFetch(domain:www.granitedesignusa.com)",
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

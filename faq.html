@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about granite, marble, quartz and natural stone. Premier Stone Importers Australia - your stone questions answered.">
+    <title>FAQ | Premier Stone Importers Australia</title>
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .faq-section {
+            padding: 80px 0;
+        }
+        .faq-item {
+            background: var(--text-white);
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        .faq-question:hover {
+            background: var(--bg-light);
+        }
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--accent-color);
+            transition: var(--transition);
+        }
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            padding: 0 30px 25px;
+            max-height: 500px;
+        }
+        .faq-answer p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        .faq-category {
+            margin-bottom: 50px;
+        }
+        .faq-category h3 {
+            font-size: 28px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <a href="tel:+61399999999"><span class="icon">📞</span> +61 3 9999 9999</a>
+                        <a href="mailto:info@premierstoneimporters.com.au"><span class="icon">✉️</span> info@premierstoneimporters.com.au</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container">
+                <div class="nav-content">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">Premier Stone</span>
+                        <span class="logo-subtext">Importers</span>
+                    </a>
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="has-dropdown">
+                            <a href="products.html">Products</a>
+                            <ul class="dropdown">
+                                <li><a href="products/granite.html">Granite</a></li>
+                                <li><a href="products/marble.html">Marble</a></li>
+                                <li><a href="products/quartz.html">Quartz</a></li>
+                                <li><a href="products/quartzite.html">Quartzite</a></li>
+                                <li><a href="products/travertine.html">Travertine</a></li>
+                                <li><a href="products/limestone.html">Limestone</a></li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="applications.html">Applications</a>
+                            <ul class="dropdown">
+                                <li><a href="applications.html#benchtops">Kitchen Benchtops</a></li>
+                                <li><a href="applications.html#cladding">Wall Cladding</a></li>
+                                <li><a href="applications.html#flooring">Flooring</a></li>
+                                <li><a href="applications.html#bathrooms">Bathrooms</a></li>
+                                <li><a href="applications.html#memorials">Memorial Stones</a></li>
+                                <li><a href="applications.html#commercial">Commercial Projects</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about our stone products</p>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> <span>/</span> <span>FAQ</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-section">
+        <div class="container">
+            <!-- General Questions -->
+            <div class="faq-category">
+                <h3>General Questions</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you provide samples?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we can provide small samples for most of our stones. However, we always recommend visiting our showroom to see full slabs, as natural stone varies significantly from slab to slab. Samples give you an idea of colour and pattern, but the full slab is where you'll see the true character of the stone.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you provide installation services?</div>
+                    <div class="faq-answer">
+                        <p>We specialise in stone supply rather than installation. However, we work closely with many excellent stonemasons and fabricators across Australia and can recommend trusted professionals in your area. This ensures you get the best quality stone paired with expert installation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What areas do you deliver to?</div>
+                    <div class="faq-answer">
+                        <p>We deliver Australia-wide, from metropolitan areas to regional locations. Delivery costs vary depending on location and order size. Contact us for a delivery quote specific to your project. For local Melbourne orders, we often provide same-week delivery.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can I select my specific slab?</div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We encourage all customers to visit our showroom and hand-select their slabs. Every natural stone slab is unique, with its own patterns, colours, and characteristics. Seeing the actual slab ensures you get exactly what you want for your project.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer trade pricing?</div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer competitive trade pricing for stonemasons, builders, and other trade professionals. Contact us to set up a trade account and discuss pricing for your regular projects.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stone Selection -->
+            <div class="faq-category">
+                <h3>Stone Selection</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between granite and quartz?</div>
+                    <div class="faq-answer">
+                        <p>Granite is a natural stone quarried from the earth, with each slab being unique. It's extremely durable and heat-resistant but requires periodic sealing. Quartz (engineered stone) is manufactured from natural quartz crystals mixed with resins. It offers consistent patterns, is non-porous (no sealing needed), but is less heat-resistant than granite. Both are excellent choices for benchtops.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is marble suitable for kitchen benchtops?</div>
+                    <div class="faq-answer">
+                        <p>Marble can be used for kitchen benchtops, but it requires more care than granite or quartz. It's softer and more porous, making it susceptible to scratching and staining from acidic substances. Many people love marble for its unmatched beauty and accept that it develops a patina over time. It's ideal for baking areas as it stays naturally cool.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Which stone is best for outdoor use?</div>
+                    <div class="faq-answer">
+                        <p>For outdoor applications, we recommend granite, quartzite, or travertine. These stones handle weather, UV exposure, and temperature changes well. Travertine is particularly popular for pool surrounds and patios. Avoid using marble or polished stones outdoors as they can become slippery when wet.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I choose the right colour?</div>
+                    <div class="faq-answer">
+                        <p>Consider your cabinetry, flooring, and overall colour scheme. Bring samples of your cabinet doors or paint colours when visiting our showroom. View stones in natural light if possible, as artificial lighting can alter colours. Our team can help guide you through the selection process based on your design goals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Care & Maintenance -->
+            <div class="faq-category">
+                <h3>Care & Maintenance</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">How often should granite be sealed?</div>
+                    <div class="faq-answer">
+                        <p>Most granite should be sealed every 1-2 years, though this varies by stone type. A simple water test can tell you if resealing is needed: sprinkle water on the surface - if it beads up, the seal is intact. If it absorbs into the stone, it's time to reseal. We can recommend quality sealers for your stone.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">How do I clean natural stone?</div>
+                    <div class="faq-answer">
+                        <p>For daily cleaning, use warm water and a soft cloth. For deeper cleaning, use a pH-neutral stone cleaner. Avoid harsh chemicals, vinegar, lemon, or abrasive cleaners as these can damage the stone or sealant. Wipe up spills promptly to prevent staining.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Can scratches be repaired?</div>
+                    <div class="faq-answer">
+                        <p>Minor scratches on polished stone can often be buffed out by a professional stone restoration specialist. Deeper scratches may require honing and repolishing. Prevention is best - use cutting boards and avoid dragging heavy objects across the surface.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ordering & Pricing -->
+            <div class="faq-category">
+                <h3>Ordering & Pricing</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">How is stone priced?</div>
+                    <div class="faq-answer">
+                        <p>Stone is typically priced per square metre or by the slab. Pricing varies based on stone type, rarity, origin, and quality. We're happy to provide quotes based on your project dimensions. Visit our showroom or contact us with your measurements for accurate pricing.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">What size slabs do you stock?</div>
+                    <div class="faq-answer">
+                        <p>Standard slab sizes vary by stone type but typically range from 2800mm x 1600mm to 3200mm x 1800mm, with thicknesses of 20mm or 30mm. We also stock tiles and smaller format stones for certain applications. Contact us for specific size availability.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do you offer payment plans?</div>
+                    <div class="faq-answer">
+                        <p>We require a deposit at the time of order with the balance due before delivery. For larger commercial projects, we can discuss payment terms. Contact us to discuss your specific requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Still Have Questions?</h2>
+                <p>Our team is here to help with any questions about stone selection and care</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    <a href="tel:+61399999999" class="btn btn-secondary">Call +61 3 9999 9999</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Premier Stone Importers</h4>
+                    <p>Australia's trusted supplier of premium granite, marble, quartz and natural stone.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="LinkedIn">LI</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="products/granite.html">Granite</a></li>
+                        <li><a href="products/marble.html">Marble</a></li>
+                        <li><a href="products/quartz.html">Quartz</a></li>
+                        <li><a href="products/quartzite.html">Quartzite</a></li>
+                        <li><a href="products/travertine.html">Travertine</a></li>
+                        <li><a href="products/limestone.html">Limestone</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <address>
+                        <p>123 Stone Street<br>Melbourne, VIC 3000<br>Australia</p>
+                        <p><a href="tel:+61399999999">+61 3 9999 9999</a></p>
+                        <p><a href="mailto:info@premierstoneimporters.com.au">info@premierstoneimporters.com.au</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Premier Stone Importers. All rights reserved.</p>
+                <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
