@@ -84,8 +84,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Form validation
-    const contactForm = document.querySelector('.contact-form form');
+    // Contact Form with AJAX submission to FormSubmit.co
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
 
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -117,21 +119,62 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             if (isValid) {
-                // Show success message
-                const successMsg = document.createElement('div');
-                successMsg.className = 'form-success';
-                successMsg.innerHTML = '<p>Thank you for your enquiry! We will get back to you shortly.</p>';
-                successMsg.style.cssText = 'background: #d4edda; color: #155724; padding: 20px; border-radius: 5px; margin-bottom: 20px;';
+                // Show loading state
+                const originalBtnText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
 
-                this.insertBefore(successMsg, this.firstChild);
-                this.reset();
+                // Prepare form data
+                const formData = new FormData(this);
 
-                // Remove success message after 5 seconds
-                setTimeout(() => {
-                    successMsg.remove();
-                }, 5000);
+                // Submit via AJAX
+                fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success === "true" || data.success === true) {
+                        // Success
+                        showFormStatus('success', 'Thank you for your message! We will get back to you within 24 hours.');
+                        contactForm.reset();
+                    } else {
+                        // Error from FormSubmit
+                        showFormStatus('error', 'There was a problem sending your message. Please try again or email us directly at info@premierstones.com');
+                    }
+                })
+                .catch(error => {
+                    console.error('Form submission error:', error);
+                    showFormStatus('error', 'There was a problem sending your message. Please try again or email us directly at info@premierstones.com');
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.textContent = originalBtnText;
+                    submitBtn.disabled = false;
+                });
             }
         });
+    }
+
+    function showFormStatus(type, message) {
+        if (formStatus) {
+            formStatus.className = 'form-status ' + type;
+            formStatus.innerHTML = '<p>' + message + '</p>';
+            formStatus.style.display = 'block';
+
+            // Scroll to status message
+            formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+            // Auto-hide success message after 10 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 10000);
+            }
+        }
     }
 
     function showError(input, message) {
