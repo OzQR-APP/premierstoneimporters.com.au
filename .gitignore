@@ -9,7 +9,6 @@ _site/
 
 # IDE and editor files
 .idea/
-.vscode/
 *.swp
 *.swo
 *~
@@ -17,8 +16,6 @@ _site/
 Thumbs.db
 
 # Environment files
-.env
-.env.local
 .env.*.local
 
 # Log files
@@ -46,3 +43,4 @@ ehthumbs.db
 # Jekyll (if used)
 .jekyll-cache/
 .jekyll-metadata
+config.bat
